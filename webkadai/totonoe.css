@@ -1,0 +1,35 @@
+h1 {
+    color: #519fbd;
+    font-size: 30px;
+    background-color:#e0e0e0;
+    width: 500px;
+    height: 50px;
+  }
+body {
+    background-color:rgb(203, 202, 202);
+}
+.top-wrapper {
+  padding: 180px 0 300px 0;
+  background-image: url(https://prog-8.com/images/html/advanced/top.png);
+  color: white;
+  background-size: cover;
+}
+.container {
+  width: 1170px;
+  padding: 15px;
+  margin: auto;
+}
+a {
+  color: #000000;
+  font-size: 30px;
+  background-color:#1aa4ff;
+  width: 500px;
+  height: 50px;
+}
+ul {
+  color: #000000;
+  font-size: 30px;
+  background-color:#eaff00;
+  width: 500px;
+  height: 100px;
+}

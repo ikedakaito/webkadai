@@ -84,7 +84,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up</title>
+    <title>ログイン</title>
     <!-- bootstrap読み込み -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -100,29 +100,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
     <div class="wrapper">
-        <h2>Sign Up</h2>
-        <p>Please fill this form to create an account.</p>
+        <h2>ログイン</h2>
+        <p>名前とパスワードを入力してください</p>
         <form action="<?php echo $_SERVER ['SCRIPT_NAME']; ?>" method="post">
             <div class="form-group">
-                <label>Username</label>
+                <label>名前</label>
                 <input type="text" name="name" class="form-control <?php echo (!empty(h($errors['name']))) ? 'is-invalid' : ''; ?>" value="<?php echo h($datas['name']); ?>">
                 <span class="invalid-feedback"><?php echo h($errors['name']); ?></span>
             </div>    
             <div class="form-group">
-                <label>Password</label>
+                <label>パスワード</label>
                 <input type="password" name="password" class="form-control <?php echo (!empty(h($errors['password']))) ? 'is-invalid' : ''; ?>" value="<?php echo h($datas['password']); ?>">
                 <span class="invalid-feedback"><?php echo h($errors['password']); ?></span>
             </div>
             <div class="form-group">
-                <label>Confirm Password</label>
+                <label>パスワードをもう１度入力してください</label>
                 <input type="password" name="confirm_password" class="form-control <?php echo (!empty(h($errors['confirm_password']))) ? 'is-invalid' : ''; ?>" value="<?php echo h($datas['confirm_password']); ?>">
                 <span class="invalid-feedback"><?php echo h($errors['confirm_password']); ?></span>
             </div>
             <div class="form-group">
                 <input type="hidden" name="token" value="<?php echo h($_SESSION['token']); ?>">
-                <input type="submit" class="btn btn-primary" value="Submit">
+                <input type="submit" class="btn btn-primary" value="ログイン">
             </div>
-            <p>Already have an account? <a href="login.php">Login here</a>.</p>
+            <p>すでにアカウントをお持ちですか? <a href="login.php">ここでログイン</a>.</p>
         </form>
     </div>    
 </body>
